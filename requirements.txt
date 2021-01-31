@@ -2,3 +2,9 @@ numpy==1.18.2
 Flask==1.1.2
 Flask-Cors==3.0.9
 gunicorn
+base64
+io
+PIL
+cv2
+keras
+tensorflow

@@ -1,6 +1,7 @@
 from flask import Flask, json, request
 from flask_cors import CORS
 from random_experiment import Experiment
+from face_verification import FaceVerification
 app = Flask(__name__)
 CORS(app)
 
@@ -13,7 +14,15 @@ def random_experiment():
         return json_response(result)
     except:
         return json_response({'Error':'Error while processing'},400)
-
+@app.route("project/faceVerification/",methods = ["POST"])
+def face_verification():
+	try:
+		content = request.json
+		temp = FaceVerification(content)
+		result = temp.main()
+		return json_response(result)
+	except:
+		return json_response({'Error':'Error while processing'},400)
 
 def json_response(payload,status=200):
     return (json.dumps(payload),status, {'content-type':'application/json'})
