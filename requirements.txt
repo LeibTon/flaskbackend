@@ -4,4 +4,4 @@ Flask-Cors==3.0.9
 gunicorn
 keras
 tensorflow
-cv2
+opencv-python
