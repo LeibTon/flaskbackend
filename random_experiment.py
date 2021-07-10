@@ -1,3 +1,6 @@
+'''
+Backend for Randomness Experiment: https://prakashaditya369.github.io/randomness
+'''
 import numpy as np
 
 class Experiment():
